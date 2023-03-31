@@ -1,3 +1,601 @@
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+*,*:before,*:after{
+    text-decoration: none;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url('./fonts/SFUIDisplay-Heavy.eot');
+    src: url('./fonts/SFUIDisplay-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/SFUIDisplay-Heavy.woff') format('woff'),
+        url('./fonts/SFUIDisplay-Heavy.ttf') format('truetype'),
+        url('./fonts/SFUIDisplay-Heavy.svg#SFUIDisplay-Heavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url('./fonts/SFUIDisplay-Black.eot');
+    src: url('./fonts/SFUIDisplay-Black.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/SFUIDisplay-Black.woff') format('woff'),
+        url('./fonts/SFUIDisplay-Black.ttf') format('truetype'),
+        url('./fonts/SFUIDisplay-Black.svg#SFUIDisplay-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url('./fonts/SFUIDisplay-Bold.eot');
+    src: url('./fonts/SFUIDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/SFUIDisplay-Bold.woff') format('woff'),
+        url('./fonts/SFUIDisplay-Bold.ttf') format('truetype'),
+        url('./fonts/SFUIDisplay-Bold.svg#SFUIDisplay-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url('./fonts/SFUIDisplay-Heavy_1.eot');
+    src: url('./fonts/SFUIDisplay-Heavy_1.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/SFUIDisplay-Heavy_1.woff') format('woff'),
+        url('./fonts/SFUIDisplay-Heavy_1.ttf') format('truetype'),
+        url('./fonts/SFUIDisplay-Heavy_1.svg#SFUIDisplay-Heavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url('./fonts/SFUIDisplay-Ultralight.eot');
+    src: url('./fonts/SFUIDisplay-Ultralight.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/SFUIDisplay-Ultralight.woff') format('woff'),
+        url('./fonts/SFUIDisplay-Ultralight.ttf') format('truetype'),
+        url('./fonts/SFUIDisplay-Ultralight.svg#SFUIDisplay-Ultralight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url('./fonts/SFUIDisplay-Light.eot');
+    src: url('./fonts/SFUIDisplay-Light.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/SFUIDisplay-Light.woff') format('woff'),
+        url('./fonts/SFUIDisplay-Light.ttf') format('truetype'),
+        url('./fonts/SFUIDisplay-Light.svg#SFUIDisplay-Light') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url('./fonts/SFUIDisplay-Medium.eot');
+    src: url('./fonts/SFUIDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/SFUIDisplay-Medium.woff') format('woff'),
+        url('./fonts/SFUIDisplay-Medium.ttf') format('truetype'),
+        url('./fonts/SFUIDisplay-Medium.svg#SFUIDisplay-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url('./fonts/SFUIDisplay-Semibold.eot');
+    src: url('./fonts/SFUIDisplay-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/SFUIDisplay-Semibold.woff') format('woff'),
+        url('./fonts/SFUIDisplay-Semibold.ttf') format('truetype'),
+        url('./fonts/SFUIDisplay-Semibold.svg#SFUIDisplay-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url('./fonts/SFUIDisplay-Thin.eot');
+    src: url('./fonts/SFUIDisplay-Thin.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/SFUIDisplay-Thin.woff') format('woff'),
+        url('./fonts/SFUIDisplay-Thin.ttf') format('truetype'),
+        url('./fonts/SFUIDisplay-Thin.svg#SFUIDisplay-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+    background-color: #0D1012;
+    font-family: 'SF UI Display';
+}
+
+.wrapper{
+    width: 91.6vw;
+    margin: 0 auto;
+}
+
+.container{
+    width: 76.6vw;
+    margin: 0 auto;
+}
+
+
+header{
+    margin: 3.5vw 0 0 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.logo_container{
+    width: 10vw;
+    height: 2.3vw;
+    position: relative;
+}
+
+.darobots_img_container{
+    width: 9.25vw;
+    height: 1.5vw;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.darobots_img_container img{
+    width: 100%;
+    height: 100%;
+}
+
+.flag_img_container{
+    width: 1.5vw;
+    height: 1vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.flag_img_container img{
+    width: 100%;
+    height: 100%;
+}
+
+nav{
+    width: 38vw;
+}
+
+nav ul{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li a{
+    color: #B5C5CB;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 1.5vw;
+}
+
+.phone_number{
+    font-size: 1vw;
+    line-height: 1.5vw;
+    font-weight: 700;
+    color: #D39F52;
+}
+
+.adv_section{
+    display: flex;
+    margin: 6vw 0 0 0;
+}
+
+.phones_img_container{
+    width: 24.5vw;
+    height: 33vw;
+    position: relative;
+}
+
+.front_phone_container{
+    width: 16.75vw;
+    height: 33vw;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    z-index: 1;
+}
+
+.front_phone_container img{
+    width: 100%;
+    height: 100%;
+}
+
+.back_phone_container{
+    width: 13.5vw;
+    height: 27vw;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.back_phone_container img{
+    width: 100%;
+    height: 100%;
+}
+
+.adv_container{
+    margin: 0 0 0 11.25vw;
+}
+
+.h1_container{
+    width: 382vw;
+}
+
 h1{
-    color: red;
+    font-family: 'Oswald', sans-serif;
+    color: #C5DFEA;
+    font-weight: 400;
+    font-size: 3.6vw;
+    line-height: 4.4vw;
+    text-transform: uppercase;
+}
+
+.small_opacity{
+    opacity: 30%;
+}
+
+.gray_text{
+    color: #B5C5CB;
+}
+
+.yellow_text{
+    color: #D39F52;
+}
+
+.h1_margin{
+    margin: 0 0 0 -8.18vw;
+}
+
+.adv_button_container{
+    margin: 3.33vw 0 0 0    ;
+}
+
+.offer_button{
+    width: 21vw;
+    height: 6.75vw;
+    padding: 0.8vw;
+}
+
+.offer_button.card_button{
+    background-color: #D39F52;
+}
+
+.offer_button.adv_button{
+    background-color: #D39F52;
+}
+
+.arrow_container{
+    width: 1vw;
+    height: 1vw;
+}
+
+.arrow_container img{
+    width: 100%;
+    height: 100%;
+}
+
+.button_content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow_l_t{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.arrow_r_t{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(90deg);
+}
+
+.arrow_r_b{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+.arrow_l_b{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: rotate(-90deg);
+}
+
+
+.offer_button a{
+    color: #000;
+    font-size: 1.2vw;
+    line-height: 1.75vw;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.add_label{
+    margin: 2.75vw 0 0 0;
+    width: 16.75vw;
+    height: 3vw;
+    font-size: 1vw;
+    line-height: 1.5vw;
+    font-weight: 400;
+    color: #B5C4CB;
+}
+
+.description_section{
+    margin: 22.5vw 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.description_about_container{
+    width: 22.5vw;
+}
+
+.description_about_container h2{
+    font-size: 3.7vw;
+    line-height: 4.5vw;
+    color: #D39F52;
+    font-weight: 400;
+}
+
+.description_about_container p{
+    margin: 1.7vw 0 0 0;
+    width: 18.75vw;
+    font-weight: 400;
+    font-size: 1.333vw;
+    line-height: 2vw;
+    color: #B5C5CB;
+}
+
+.description_about_images{
+    margin: 4.25vw 0 0 0;
+    width: 15.5vw;
+    display: flex;
+    align-items: flex-end;
+    column-gap: 1.5vw;
+}
+
+.description_about_images img{
+    width: 100%;
+    height: 100%;
+}
+
+.about_img_container{
+    width: 6.5vw;
+    max-height: 18.3vw;
+}
+
+.description_card{
+    width: 22.5vw;
+    background: #B5C4CB;
+    color: #0D1012;
+    padding: 2.5vw;
+    position: relative;
+}
+
+.description_card h3{
+    font-size: 1.7vw;
+    line-height: 2vw;
+    font-weight: 500;
+}
+
+.description_card p{
+    margin: 1.7vw 0 0 0;
+    font-size: 1vw;
+    line-height: 1.5vw;
+    font-weight: 400;
+}
+
+.card_number{
+    font-size: 1vw;
+    line-height: 1.5vw;
+    font-weight: 400;
+    opacity: 50%;
+    position: absolute;
+    top: 1.25vw;
+    right: 1.5vw;
+}
+
+.card_button{
+    margin: 1.33vw 0 0 0;
+    width: 22.5vw;
+}
+
+.description_card_container{
+    padding: 8.3vw 0 0 0;
+}
+
+.how_work_section{
+    margin: 29vw 0 0 0;
+}
+
+.how_work_header_item{
+    display: flex;
+    align-items: center;
+    margin: 0 0 6.6vw 11.7vw;
+}
+
+.how_work_header_item h2{
+    font-weight: 400;
+    font-size: 3.7vw;
+    line-height: 4.5vw;
+    color: #D39F52;
+}
+
+.arrow_decoration_container{
+    width: 3vw;
+    height: 2.7vw;
+    margin: 0 25.25vw 0 0;
+} 
+
+.arrow_decoration_container img{
+    width: 100%;
+    height: 100%;
+}
+
+.how_work_item{
+    min-height: 21.08vw;
+    position: relative;
+    padding: 7.5vw 0 7.5vw 11.7vw;
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #B5C5CB;
+    column-gap: 24.9vw;
+}
+
+.how_work_item p{
+    color: #D39F52;
+    font-size: 2vw;
+    line-height: 2.5vw;
+}
+
+.how_work_item_content{
+    
+}
+
+.how_work_item_content h3{
+    color: #D39F52;
+    font-size: 2vw;
+    line-height: 2.5vw;
+    text-transform: uppercase;
+}
+
+.how_work_item_content p{
+    font-weight: 400;
+    font-size: 1.3vw;
+    line-height: 2vw;
+    color: #B5C5CB;
+    margin: 1.7vw 0 0 0;
+    max-width: 43.9vw;
+}
+
+.how_work_img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 91.6vw;
+    height: 21.08vw;
+    opacity: 1000%;
+}
+
+.how_work_img img{
+    width: 100%;
+    height: 100%;
+}
+
+.how_work_img:hover{
+    opacity: 100%;
+}
+
+.how_work_item img{
+    opacity: 0%;
+    transition: 0.5s ease-out 0.5s;
+}
+
+.how_work_item:hover img{
+    opacity: 100%;
+}
+
+.price_section{
+    padding: 15.4vw  0 12.5vw 0;
+}
+
+.price_section_item{
+    padding: 3.33vw 0 3.75vw 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #B5C4CB;
+}
+
+.price_section_item h3{
+    color: #D39F52;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2vw;
+    line-height: 2.5vw;
+    margin: 0 0 1.7vw 0;
+}
+
+.price_section_item.price_heading h3{
+    font-weight: 400;
+    font-size: 3.7vw;
+    line-height: 2vw;
+    margin: 0 0 2.5vw 0;
+}
+
+.price_section_content_text{
+    max-width: 34.5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price_section_content_text p{
+    color:#B5C5CB;
+    opacity: 60%;
+    font-size: 1vw;
+    font-weight: 1.5vw;
+    text-transform: uppercase;
+}
+
+.price_section_content_text span{
+    font-size: 1.7vw;
+    line-height: 2vw;
+}
+
+.price_section_image{
+    width: 2.2vw;
+    height: 2.2vw;
+    transform: rotate(145deg);
+}
+
+.price_section_image img{
+    width: 100%;
+    height: 100%;
+}
+
+.offer_button.price_section_button{
+    width: 13.3vw;
+    height: 6.75vw;
+    border: 1px solid #D39F52;;
+}
+
+.offer_button.price_section_button a{
+    color: #D39F52;
 }
