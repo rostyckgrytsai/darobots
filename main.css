@@ -633,13 +633,14 @@ h1{
 
 
 .menu_buttton{
-    display: none; 
+    display: none;
 }
 
 .menu_button_content{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.3s ease-out 0.3s; 
 }
 
 .menu_button_text{
@@ -650,30 +651,117 @@ h1{
     margin: 1.282vw;
 }
 
-.menu_button_decoration{
-    width: 2.308vw;
-    height: 1.026vw;
-    z-index: 2;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.menu_button_decoration span{
-    width: 2.179vw;
-    height: 1px;
-    background: #B5C5CB;
-}
-
 .description_about_container.tablet{
     display: none;
 }
 
+.menu_burger{
+    width: 4.1vw;
+    height: 1.691vw;
+    position: fixed;
+    top: 5.4vw;
+    right: 4.8vw;
+    transition: 0.3s ease-out 0.3s;
+}
+
+.menu_burger span{
+    width: 100%;
+    height: 1px;
+    background-color: #B5C5CB;
+    position: absolute;
+    left: 0;
+    top: 0.725vw;
+    transition: 0.3s ease-out 0.3s;
+}
+
+.menu_button_text.active{
+    display: none;
+}
+
+.menu_buttton.active{
+    display: block;
+    z-index: 3;
+}
+
+.menu_burger::before, 
+.menu_burger::after{
+    width: 100%;
+    height: 1px;
+    background-color: #B5C5CB;
+    transition: 0.3s ease-out 0.3s;
+}
+
+.menu_burger::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.menu_burger::after{
+    content: '  ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.menu_burger.active span{
+    transform: scale(0);
+}
+
+.menu_burger.active::before{
+    top: 0.725vw;
+    transform: rotate(-225deg);
+}
+
+.menu_burger.active::after{
+    bottom: 0.725vw;
+    transform: rotate(45deg);
+}
+
+.header_menu{
+    position: fixed;
+    z-index: 3;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0D1012;
+    transition: 0.5s ease-out 0.5s;
+}
+
+.header_menu ul{
+    display: block;
+    width: 72.464vw;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.header_menu li{
+    list-style: none;
+    padding: 1vw 0;
+    border-bottom: 1px solid #B5C5CB;
+    margin: 1vw 0 0 0;
+    max-width: 100%;
+}
+
+.header_menu li a{
+    color: #B5C5CB;
+    font-size: 3.5vw;
+    text-transform: uppercase;
+}
+
+.header_menu.active{
+    top: 0;
+}
 
 
 @media (max-width: 780px){
     
+    body.lock{
+        overflow: hidden;
+    }
+
     .wrapper{
         width: 81.179vw;
     }
@@ -892,6 +980,10 @@ h1{
 }
 
 @media (max-width: 414px){
+
+    body.lock{
+        overflow: hidden;
+    }
     
     .wrapper{
         width: 81.179vw;
